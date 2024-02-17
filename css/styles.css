@@ -1,0 +1,286 @@
+/*Variables*/
+:root {
+    --color-fondo: #E5E5E5; 
+    --color-principal: darkblue; 
+    --color-secundario: white;
+}   
+
+
+
+/*Etiquetas semánticas*/
+body {
+    background: var(--color-fondo)
+}
+
+main, footer {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 auto ;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    width: 80%;
+}
+
+footer {
+    margin: 1% auto;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    flex-direction: column;
+    align-content: center;
+    height: 5%; 
+    padding: 2%;
+}
+/*Parte del footer*/
+.cont-redes-sociales {
+    display: flex;
+    justify-content:center; 
+}
+
+.cont-redes-sociales  a img {
+    margin-right: 1rem; 
+}
+
+/*Sección encriptar - desencriptar*/
+.sect-encriptar-desencriptar {
+    display: flex; 
+    flex-direction: column;
+    width: 60%;
+    padding:2%;
+}
+
+.img-alura {
+    height: auto;
+    width: 20%;
+}
+
+#frm-encriptacion {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 10%;
+}
+
+.txt-encriptar-desencriptar{
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+    font-size: 2rem; 
+    margin-bottom: 1.5rem;
+    width: 100%; 
+    height: 20rem;
+    max-width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+.txt-encriptar-desencriptar::placeholder{
+    color: var(--color-principal);
+}
+
+.mensaje-error {
+    display: none;
+} 
+
+.advertencia { 
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom:0.5rem;
+}
+
+.advertencia > img {
+    margin-right: 0.5rem;
+}
+
+.btns-encriptacion {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+}
+
+.btn-encriptar {
+    background: #046779;
+    border-radius: 24px;
+    border: 1px solid black; 
+    color: var(--color-secundario);
+    cursor: pointer;
+    font-weight: bold;
+    height: 3.5rem;
+    overflow: hidden;
+    width: 45%;
+    transition: 0.5s;   
+}
+
+.btn-encriptar:hover {
+    background-color: rgb(202, 40, 67);
+    color: var(--color-secundario);
+    border-color: var(--color-principal);
+    font-size: 1.3rem;
+}
+
+.btn-encriptar:active {
+    background-color: black;
+}
+
+.btn-desencriptar {
+    background: var(--color-fondo);
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    font-weight: bold;
+    height: 3.5rem;
+    overflow: hidden;
+    width: 45%;
+    transition: 0.5s;   
+}
+
+.btn-desencriptar:hover {
+    background-color: rgb(31, 190, 31);
+    color: var(--color-secundario);
+    font-size: 1.3rem;
+}
+
+.btn-desencriptar:active {
+    background-color: black;
+}
+
+/*Sección mensaje desencriptar*/
+.sect-msj-encriptacion {
+    align-items: center;
+    align-content: center;
+    background-color: var(--color-secundario);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); 
+    border-radius: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2%;
+    text-align: center;
+    width: 40%;
+}
+
+.img-ningun-mensaje {
+    width: 90%;
+    height:auto;
+}
+
+.mensaje {
+    width: 100%;
+    font-size: 1.5rem;
+    color: gray; 
+    overflow:hidden;
+}
+
+.flex-column { 
+    justify-content: center;
+    align-content: space-between;
+}
+
+.btn-copiar {
+    background: var(--color-fondo);
+    border: 1px solid var(--color-principal);
+    border-radius: 24px;
+    color: var(--color-principal);
+    cursor: pointer;
+    font-weight: bold;
+    height: 3.5rem;
+    overflow: hidden;
+    width: 45%;
+    transition: 0.5s;  
+}
+
+.btn-copiar:hover {
+    background-color: rgb(31, 190, 31);
+    color: var(--color-secundario);
+    font-size: 1.3rem;
+}
+
+.btn-copiar:active {
+    background-color: black;
+}
+/*Media Queries*/
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+    main, footer {
+        width: 90%;
+    }
+    footer {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .sect-encriptar-desencriptar {
+        width: 100%;
+        padding:2%;
+    }
+
+    .sect-msj-encriptacion {
+        flex-direction: column;
+        padding: 2%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .img-ningun-mensaje {
+        width: 50%;
+        height:auto;
+    }
+
+    .btn-copiar {
+        width:45%;
+        transition: 0.5s;  
+    }
+    
+}
+
+/*Celulares*/
+@media screen and (max-width: 375px) {
+
+    main, footer {
+        width: 95%;
+    }
+
+    footer { 
+        border: 1px solid var(--color-principal);
+        color: black;
+    }
+
+    .sect-encriptar-desencriptar {
+        width: 100%;
+        padding:2%;
+    }
+
+    #frm-encriptacion {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sect-msj-encriptacion {
+        padding: 2%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .btn-copiar {
+        width:45%;
+        transition: 0.5s;  
+    }
+
+    .btns-encriptacion {
+        flex-direction: column;
+        row-gap: 1rem;
+        width: 100%;
+    }
+
+    .btn-encriptar, .btn-desencriptar  {
+        width: 100%;
+        transition: 0.5s;   
+    }
+}

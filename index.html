@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Texto</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>      
+        <section class="sect-encriptar-desencriptar">
+            <header id="header">
+                <h1>Encriptador de Texto</h1>
+                <img class="img-alura" src="images/Logo.png" alt="logo alura">
+            </header>
+
+            <form id="frm-encriptacion">
+                
+                <textarea id="entrada" class="txt-encriptar-desencriptar" placeholder="Ingrese el texto aquí" autofocus></textarea>
+
+                <div class="advertencia">
+                    <small><img src="images/warning.png" alt="imagen de advertencia"> Solo letras minúsculas y sin acentos</small>
+                </div>
+               
+                <fieldset class="btns-encriptacion">
+                    <button class="btn-encriptar">Encriptar</button>
+                    <button class="btn-desencriptar">Desencriptar</button> 
+                </fieldset>
+                
+            </form>
+        </section>
+
+        <section class="sect-msj-encriptacion" id="msj">
+            <img src="images/Muñeco.png" alt="Imagen ningun mensaje encontrado" class="img-ningun-mensaje">
+            <h3 class="msj-ningun-mensaje">Ningún mensaje fue encontrado</h3>
+            <p class="p-ningun-mensaje">Ingresa el texto que deseas encriptar o desencriptar</p>
+        </section>        
+
+    </main>
+
+    <footer>    
+        <small>Desarrollado por Ricardo Casco 2024</small>
+        <div class="cont-redes-sociales">
+            <a href="https://www.linkedin.com/in/ricardo-alfredo-casco" target="_blank"> <img src="images/linkedin.png" alt="imagen linkedin"></a>
+            <a href="https://github.com/richardsoftware" target="_blank" > <img src="images/github.png" alt="imagen github"></a>
+        </div>
+    </footer>
+
+   
+    <script src="js/encriptacion.js"></script>
+</body>
+</html>
